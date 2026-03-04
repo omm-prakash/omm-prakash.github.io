@@ -1,8 +1,3 @@
-## News
-
-- **2024.** DAAD WISE Scholar: Selected for fully-funded on-site internship at Leuphana University, Germany.
-- **2023.** Khorana Scholar: Awarded with a prestigious fellowship (Top 0.9% of 8,000+) for internship at UC San Diego.
-
 ## Publications
 
 - **Fault-Resilient RIS Systems: Toward SINR-and Sum-Rate Maximization of IoT Networks Using ML Frameworks** (2025). VK Bhardwaj, **OP Sahoo**, MK Shukla, OJ Pandey. *IEEE Transactions on Circuits and Systems I: Regular Papers*.

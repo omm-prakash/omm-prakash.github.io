@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -22,16 +23,34 @@
         <div class="nav-content">
             <a href="#hero" class="nav-brand">Omm Prakash Sahoo</a>
             <div style="display: flex; align-items: center; gap: 32px;">
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#news">News</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#publications">Publications</a></li>
                 </ul>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#news">News</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -43,15 +62,15 @@
                     <!-- Markdown content will be rendered here -->
                 </div>
                 <div class="hero-right">
-                    <img src="profile.jpg" alt="Omm Prakash Sahoo" class="profile-img">
+                    <img src="profile.jpeg" alt="Omm Prakash Sahoo" class="profile-img">
                 </div>
             </div>
         </section>
 
-        <!-- Publications & News Section -->
-        <section id="publications" class="section-spacing fade-in">
+        <!-- News Section -->
+        <section id="news" class="section-spacing fade-in">
             <div class="section-container">
-                <div id="publications-content">
+                <div id="news-content">
                     <!-- Markdown content will be rendered here -->
                 </div>
             </div>
@@ -91,6 +110,23 @@
         <section id="education" class="section-spacing fade-in">
             <div class="section-container">
                 <div id="education-content">
+                    <!-- Markdown content will be rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & News Section -->
+        <section id="publications" class="section-spacing fade-in">
+            <div class="section-container">
+                <div id="publications-content">
+                    <!-- Markdown content will be rendered here -->
+                </div>
+            </div>
+        </section>
+        <!-- Extracurricular Activities Section -->
+        <section id="extracurricular" class="section-spacing fade-in">
+            <div class="section-container">
+                <div id="extracurricular-content">
                     <!-- Markdown content will be rendered here -->
                 </div>
             </div>

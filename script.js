@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.replace('fa-moon', 'fa-sun');
         }
     } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDark) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
+        // Default to light mode
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
     }
 
     themeToggle.addEventListener('click', () => {
@@ -30,6 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.replace('fa-moon', 'fa-sun');
         }
     });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    }
 
     // Set current year in footer
     const yearSpan = document.getElementById('year');
@@ -69,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Markdown Rendering Logic
     async function loadMarkdown(file, containerId, renderFunction) {
         try {
-            const response = await fetch(file);
+            const response = await fetch(file, { cache: "no-store" });
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const markdown = await response.text();
 
@@ -341,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cdn.className = 'section-container';
 
             const grid = document.createElement('div');
-            grid.className = 'two-col-grid';
+            grid.className = 'one-col-grid';
 
             h1s.forEach(heading => {
                 const col = document.createElement('div');
@@ -425,6 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load all markdown files
     loadMarkdown('src/about.md', 'about-content', renderAbout);
+    loadMarkdown('src/news.md', 'news-content', renderPublications);
     loadMarkdown('src/publications.md', 'publications-content', renderPublications);
     loadMarkdown('src/skills.md', 'skills-content', renderSkills);
     loadMarkdown('src/experience.md', 'experience-content', renderExperience);
@@ -433,4 +451,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // We moved the achievements out to publications, so we only need to render the education cards.
     // The previous renderEducation function still works fine if it just finds h2s for the cards.
     loadMarkdown('src/education.md', 'education-content', renderEducation);
+    loadMarkdown('src/extracurricular.md', 'extracurricular-content', renderPublications);
 });
