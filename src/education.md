@@ -1,12 +1,20 @@
 ## Indian Institute of Technology (BHU), Varanasi
 
 *2020 - 2025*
-| Integrated Dual Degree (BTech+MTech), Electrical Engineering
+
+Integrated Dual Degree (BTech+MTech), Electrical Engineering
 
 ## Indian Institute of Technology, Madras
 
 *2022 - 2025*
-| Bachelor of Science (BSc), Data Science & Programming (*Concurrent Hybrid Mode*)
+
+Bachelor of Science (BSc), Data Science & Programming (*Concurrent Hybrid Mode*)
+
+## Jawahar Navodaya Vidyalaya, Cuttack, Odisha
+
+*2019*
+
+Secondary School, CBSE
 
 # Scholastic Achievements
 

@@ -1,6 +1,6 @@
 :root {
     /* Color Palette - Formal Light Theme (Slate) */
-    --bg-color: #f8fafc;
+    --bg-color: #fffffb;
     --bg-surface: #ffffff;
     --bg-surface-hover: #f1f5f9;
 
@@ -91,7 +91,7 @@ a:hover {
 }
 
 .section-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     box-sizing: border-box;
@@ -169,7 +169,7 @@ a:hover {
 }
 
 .nav-content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 24px;
     display: flex;
@@ -217,7 +217,7 @@ a:hover {
 }
 
 .hero-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -500,13 +500,27 @@ a:hover {
     gap: 32px;
 }
 
+.project-card {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    transition: transform var(--transition-fast);
+}
+
+.project-card:hover {
+    border: none;
+    transform: translateY(-4px);
+}
+
 .project-card .card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 12px;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
 }
 
 .project-card h3 {
@@ -540,9 +554,20 @@ a:hover {
 .card-list .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 8px;
     flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header-left h3,
+.header-left p {
+    margin: 0;
 }
 
 .card-list h3 {

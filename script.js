@@ -275,9 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // check for direct bullet list
             if (nextEl && nextEl.tagName === 'UL') {
-                nextEl.className = 'bullet-list mt-top';
-                cardDiv.appendChild(nextEl);
+                const currentEl = nextEl;
                 nextEl = nextEl.nextElementSibling;
+                currentEl.className = 'bullet-list mt-top';
+                cardDiv.appendChild(currentEl);
             }
 
             // Check for subsections natively
@@ -289,11 +290,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 h4.textContent = nextEl.textContent;
                 subDiv.appendChild(h4);
 
+                // Move nextEl to subDiv but keep track of sibling
+                const headingEl = nextEl;
                 nextEl = nextEl.nextElementSibling;
+
                 if (nextEl && nextEl.tagName === 'UL') {
-                    nextEl.className = 'bullet-list';
-                    subDiv.appendChild(nextEl);
+                    const ulEl = nextEl;
                     nextEl = nextEl.nextElementSibling;
+                    ulEl.className = 'bullet-list';
+                    subDiv.appendChild(ulEl);
                 }
                 cardDiv.appendChild(subDiv);
             }
@@ -322,26 +327,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 const header = document.createElement('div');
                 header.className = 'card-header';
 
+                const headerLeft = document.createElement('div');
+                headerLeft.className = 'header-left';
+
                 const h3 = document.createElement('h3');
                 h3.innerHTML = `<i class="fas fa-university mr-sm"></i> ${heading.textContent}`;
-                header.appendChild(h3);
+                headerLeft.appendChild(h3);
 
                 let nextEl = heading.nextElementSibling;
+                let dateSpan = null;
+
                 if (nextEl && nextEl.tagName === 'P') {
-                    const dateSpan = document.createElement('span');
+                    dateSpan = document.createElement('span');
                     dateSpan.className = 'date';
                     dateSpan.textContent = nextEl.textContent;
-                    header.appendChild(dateSpan);
                     nextEl = nextEl.nextElementSibling;
                 }
-                card.appendChild(header);
 
                 if (nextEl && nextEl.tagName === 'P') {
                     const p = document.createElement('p');
                     p.className = 'italic-text';
                     p.innerHTML = nextEl.innerHTML;
-                    card.appendChild(p);
+                    headerLeft.appendChild(p);
                 }
+
+                header.appendChild(headerLeft);
+                if (dateSpan) header.appendChild(dateSpan);
+                card.appendChild(header);
                 cardList.appendChild(card);
             });
             container.appendChild(cardList);

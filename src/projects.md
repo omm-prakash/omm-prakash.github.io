@@ -1,6 +1,6 @@
 ## The AI Researcher (TAR): A Multi-Agent AI System
 
-*A robust research agent orchestrating only 4-node subagents to deliver hallucination-free, multi-modal insights.* | [Chat](#) | [Github](#)
+*A research agent orchestrating only 4-node subagents to deliver hallucination-free, multi-modal insights.* | [Chat](https://the-ai-researcher.vercel.app/) | [Github](https://github.com/omm-prakash/The-AI-Researcher/)
 
 ### I. Agentic Workflow & Architecture
 
@@ -23,8 +23,16 @@
 
 ## Powerformer: An Intelligent Fault Diagnosis System for AC Microgrids
 
-[Github](#)
+[Github](https://github.com/omm-prakash/Powerformer)
 
 - Architected a custom Graph Transformer & deployed in Super Computer for real-time fault detection & localization.
 - Optimized processing latency to just 9 ms by engineering a high-throughput Python data ingestion & inference pipeline.
 - Delivered a 94.9% F1-score in system reliability by integrating closed-loop, event-driven automated response protocols.
+
+## Deep Learning Based Choledoch Cancer Cell Detection Paper
+
+[Paper](https://doi.org/10.1364/OPTCON.527576)
+
+- Advanced Choledoch cancer detection to a SOTA 73.27% IoU by implementing a 3D-UNet segmentation model.
+- Segmented the cancerous portion in hyperspectral images of Choledoch tissue with deep learning models.
+- Performed dimensionality reduction and noise filtration on microscopic hyperspectral data of 102 GB on HPC.
