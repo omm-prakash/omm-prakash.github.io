@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VectorSync: Method to Localize IoT UE - Omm Prakash Sahoo</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color, #ffffff);
+            color: var(--text-primary, #333333);
+            line-height: 1.6;
+        }
+        .project-header {
+            padding: 2rem 5%;
+            background-color: var(--nav-bg, #ffffff);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--accent-light, #1793D1);
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--accent-color, #0b6fa4);
+        }
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            color: var(--text-heading, #111111);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        .content-section h2 {
+            font-size: 1.75rem;
+            color: var(--text-heading, #1f1f1f);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-light, #1793D1);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+        .content-section h3 {
+            font-size: 1.35rem;
+            color: var(--text-heading, #222222);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+        .content-figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .content-figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .content-figure figcaption {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary, #666666);
+            font-style: italic;
+        }
+        a {
+            color: var(--accent-light, #1793D1);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="project-header">
+        <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+        <h1 class="project-title">VectorSync: Method to Localize IoT UE</h1>
+    </header>
+
+    <main class="container">
+        
+        <section class="content-section">
+            <p>Localizing nodes in time-varying Internet of Things (IoT) networks is challenging owing to increasing latency and low Signal-to-Interference plus Noise Ratio (SINR) at the Base Station (BS). Reconfigurable Intelligent Surface (RIS) technology has been deployed between transmitter and receiver to enhance signal strength at the BS. New phase prediction approaches and optimum weight assignment frameworks have been suggested for RIS and BSs. However, these approaches perform poorly due to their heuristic approach, resulting in increased time consumption and low SINR. The project presents a novel node localization approach for a RIS-assisted time-varying IoT network utilizing Machine Learning (ML) frameworks to address the aforementioned problems.</p>
+            
+            <figure class="content-figure">
+                <img src="assets/vectorsync/system_flow.png" alt="Proposed System Flow">
+                <figcaption>Proposed System Flow</figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>Dynamic UE Position</h2>
+            <p>We created a dynamic simulation setup in which the signal is first sent from the User Equipment (UE) and then reflected at the RIS. At the BS, correlation is carefully calculated between direct UE signals and reflected RIS signals. This connection aids in the precise determination of the UE's position. To ensure the applicability and adaptability of the proposed solutions across a variety of contexts, UE placements are dynamically changed in many locations, and the results are provided as an average.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Coff2Phase at RIS</h2>
+            <p>The coeff2phaseNN approach is presented to forecast phase shifts at the RIS. A thorough study is conducted to assess the robustness of the proposed architecture and compare its efficacy to other ML approaches. Compared to current techniques, the model outperforms the previously suggested ANN-RIS architecture by <a href="https://ieeexplore.ieee.org/abstract/document/10278112" target="_blank">Amit et al.</a> in terms of predicted angle and mean squared error (MSE) loss.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>VectorSync at BS</h2>
+            <p>The proposed model VectorSync is an attention-based Long Short-Term Memory (LSTM) architecture at the BS for predicting antenna weight to gain optimal beamforming. The model's inputs are carefully selected; these comprise angles with direction vectors of signals, all absent in earlier studies. This technique surpasses traditional methods regarding SINR, consumed time, and Localization Error (LR). The results show a significant improvement in SINR, reaching 32.308 dB, greater than traditional approaches and the ML solution in <a href="https://ieeexplore.ieee.org/abstract/document/9858302" target="_blank">Mallioras et al.</a> (base model).</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Results</h2>
+            
+            <h3>SINR vs Power at UE</h3>
+            <p>The performance is measured in terms of SINR response with varied input power. It is noticed that the suggested technique has the greatest SINR for lower input power values, followed by the base, capon, and Bartlett methods. The figure shows how SINR at the BS varies with input power. When the input power is set to 1-watt, it results in a 32.85 dB SINR at the BS using our proposed technique. The base model has a SINR of 20.435 dB, whereas the Capon technique has a SINR of 19.95 dB. Despite low input power, our suggested technique obtains the greatest SINR at the BS.</p>
+            <figure class="content-figure">
+                <img src="assets/vectorsync/sinr_vs_power.png" alt="SINR vs Power at UE">
+                <figcaption>SINR vs Power at UE</figcaption>
+            </figure>
+
+            <h3>Localization Error vs Phase Error STD</h3>
+            <p>The relationship between LR and phase error (after correlation) standard deviation (STD). The plot illustrates that when the STD is 6, the CRLB reaches an LR of 0.9 m. The proposed method works incredibly well, with an LR of 1.6 m, which is quite near to the Cramer Rao Lower Bound (CRLB). In comparison, the Maximum Likelihood Estimation (MLE) approach has an LR of 2.8 m, and the Linear Least Squares (LLS) method has a higher error of 4 meters. This demonstrates the substantial accuracy of our proposed method, which closely aligns with the theoretical CRLB.</p>
+            <figure class="content-figure">
+                <img src="assets/vectorsync/localization_error_vs_phase.png" alt="Localization Error vs Phase Error STD">
+                <figcaption>Localization Error vs Phase Error STD</figcaption>
+            </figure>
+
+            <h3>Time Delay vs Method</h3>
+            <p>The delay study compares the proposed VectorSync method's time consumption to other available methods. The VectorSync approach takes 0.25 seconds to localize, whereas the base model, Capon, and Bartlett methods take 0.5794, 1.20, and 3.2459 seconds, respectively. The proposed method has the shortest delay, making it the fastest among all the methods compared.</p>
+            <figure class="content-figure">
+                <img src="assets/vectorsync/time_delay.png" alt="Time Delay vs Method">
+                <figcaption>Time Delay vs Method</figcaption>
+            </figure>
+
+            <h3>Localization Error vs Method</h3>
+            <p>The resultant LR is from four distinct beamforming techniques, including the suggested technique. VectorSync demonstrates a remarkably low LR of 6.156%, indicating its accuracy in position estimates. However, other approaches like Bartlett and Capon show poorer levels of effectiveness and larger errors.</p>
+            <figure class="content-figure">
+                <img src="assets/vectorsync/localization_error.png" alt="Localization Error vs Method">
+                <figcaption>Localization Error vs Method</figcaption>
+            </figure>
+        </section>
+
+        <section class="content-section">
+            <h2>Conclusion</h2>
+            <p>This project addresses the challenge of node localization in time-varying IoT networks by leveraging ML frameworks with RIS. Our novel approach optimizes RIS phase configuration and antenna weight assignment at the BS using the coeff2phaseNN and VectorSync models, respectively. Experimental results show significant improvements in signal quality, time efficiency, and localization accuracy compared to traditional methods, demonstrating the potential of integrating ML with RIS for advanced IoT network management.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
