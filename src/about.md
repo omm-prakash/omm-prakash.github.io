@@ -3,7 +3,7 @@
 Welcome to my portfolio! I'm glad you're here.
 
 <!-- I expertise full AI lifecycle, from statistical foundations & classical ML to LLM and research-driven agentic systems. -->
-I expertise in the entire AI spectrum, from core statistics and classical ML to building LLM-powered agentic systems. Currently, I am a **ML Engineer** at **OLA**, working on scaling telemetry processing and generative AI microservices. My work focuses on high-throughput pipelines, latency reduction, and large-scale ETL workflows for telematics data.
+I expertise in the entire AI spectrum, from core statistics and classical ML to building LLM-powered agentic systems. Currently, I am an **ML Engineer** at **OLA**, working on scaling telemetry processing and generative AI microservices. My work focuses on high-throughput pipelines, latency reduction, and large-scale ETL workflows for telematics data.
 
 Previously, I was a Machine Learning Intern in [ML3](https://ml3.leuphana.de/) group, **Leuphana University, Germany** under [Prof. Ulf Brefeld](https://ml3.leuphana.de/team/ulf.html), where I enhanced multi-agent trajectory prediction systems and optimized performance for Transformer Encoders in deterministic environments. Earlier, I was a Software Engineering Intern (AI/ML) in [WCSN](https://wcsng.ucsd.edu/) group, **UC San Diego, USA** under [Prof. Dinesh Bharadia](https://dineshb-ucsd.github.io/), where I automated broad-spectrum WiFi anomaly detection and reduced processing errors using robust clustering algorithms.
 

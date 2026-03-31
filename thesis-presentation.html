@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT IDD Thesis Presentation - Omm Prakash Sahoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: var(--bg-color, #ffffff);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary, #333333);
+        }
+        .presentation-header {
+            padding: 1rem 2rem;
+            background-color: var(--nav-bg, #ffffff);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .presentation-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .back-btn {
+            text-decoration: none;
+            color: var(--accent-light, #1793D1); /* Arch Linux blue match or similar */
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+        .back-btn:hover {
+            color: var(--accent-color, #0b6fa4);
+        }
+        .pdf-container {
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="IIT_IDD_Thesis_Presentation.pdf" class="pdf-container"></iframe>
+</body>
+</html>
