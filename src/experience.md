@@ -1,6 +1,6 @@
 ## Machine Learning Engineer (Assistant Manager) | OLA, Banglore, India
 
-*July 2025 - Present*
+*May 2025 - Present*
 
 - Scaled telemetry processing for 800K+ vehicles by engineering high-throughput pipelines on OLA Kutrim Cloud.
 - Reduced insight latency by 25% by deploying gpt-oss-120b LLM as microservices via vLLM for CAN signal parsing.

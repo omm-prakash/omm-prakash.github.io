@@ -1,6 +1,6 @@
 ## News
 
-- **July 2025:** Joined **OLA** as a Machine Learning Engineer.
+- **May 2025:** Joined **OLA** as a Machine Learning Engineer.
 - **Sep 2025:** Our work on "Attention-Guided RIS Configuration" accepted in **IEEE Transactions on Artificial Intelligence**.
 - **May 2025:** Published "Fault-Resilient RIS Systems" in **IEEE Transactions on Circuits and Systems I**.
 - **Feb 2025:** "ML-driven Node Localization" research featured in **IEEE Transactions on Network and Service Management**.
