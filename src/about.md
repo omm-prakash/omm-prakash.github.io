@@ -12,7 +12,7 @@ I completed my Dual Degree (BTech+MTech) in **Electrical Engineering** at **IIT 
 Currently, I am actively building AI agents and workflows. Feel free to connect, and please check out my personal research agent [here](https://the-ai-researcher.vercel.app/).
 
 <div class="social-icons">
-  <a href="https://linkedin.com/in/omm-prakash-92a3a9162" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.linkedin.com/in/omm-prakash-sahoo-92a3a9162/" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
   <a href="https://github.com/omm-prakash" target="_blank" aria-label="GitHub" class="github"><i class="fab fa-github"></i></a>
   <a href="https://scholar.google.com/citations?user=d09n0mEAAAAJ" target="_blank" aria-label="Google Scholar" class="scholar"><i class="fas fa-graduation-cap"></i></a>
   <a href="mailto:ommprakash2568@gmail.com" aria-label="Email" class="email"><i class="fas fa-envelope"></i></a>
