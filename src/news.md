@@ -1,7 +1,7 @@
 ## News
 
 
-- **May 2026:** Joined **KLA** as a Associate Technical Lead.
+- **May 2026:** Joined **KLA** as an Associate Technical Lead.
 - **July 2025:** Joined **OLA** as a Machine Learning Engineer.
 - **Sep 2025:** Our work on "Attention-Guided RIS Configuration" accepted in **IEEE Transactions on Artificial Intelligence**.
 - **May 2025:** Published "Fault-Resilient RIS Systems" in **IEEE Transactions on Circuits and Systems I**.
